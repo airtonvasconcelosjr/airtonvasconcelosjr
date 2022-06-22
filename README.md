@@ -4,6 +4,16 @@ Hi there, i'm Airton Jr!
 -  I’m currently learning JavaScript;
 -  Pronouns: He/his
 
+##
+
+<div>
+// If this code works, it was written by me.
+ If not, I don't know who wrote it...
+</div>
+
+##
+
+
 <div align="center">
   <a href="https://github.com/airtonvasconcelosjr">
   <img height="195em" src="https://github-readme-stats.vercel.app/api?username=airtonvasconcelosjr&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
