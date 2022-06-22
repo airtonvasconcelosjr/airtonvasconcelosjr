@@ -6,9 +6,11 @@ Hi there, i'm Airton Jr!
 
 <div align="center">
   <a href="https://github.com/airtonvasconcelosjr">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=airtonvasconcelosjr&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=airtonvasconcelosjr&layout=compact&langs_count=7&theme=dark"/>
+  <img height="195em" src="https://github-readme-stats.vercel.app/api?username=airtonvasconcelosjr&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
+  <img src="[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=airtonvasconcelosjr&theme=dark)](https://git.io/streak-stats)/>
 </div>
+  
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=airtonvasconcelosjr&theme=dark)](https://git.io/streak-stats) 
   
 <div style="display: inline_block"><br>
   <img align="center" alt="Rafa-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
