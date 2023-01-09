@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>GreenCity</title>
+    <img src="assets/06-LOGO.png">
+</head>
+<body>
+    <hr></hr>
+    <h1>Vem tomar um café <br> com a gente!</h1>
+
+    <!-- Recomendamos que você não altere os IDs dos elementos do formulário -->
+    <div class="container"> 
+        <form id="contact" action="#">
+            <input type="text" id="name" placeholder="Nome">
+            <input type="text" id="email" placeholder="Email">
+            <textarea style="resize: none"name="message" id="message" cols="30" rows="10" placeholder="Mensagem"></textarea>
+            <button type="submit" onblur="valida()" value="submit">ENVIAR</button>  
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
