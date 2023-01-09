@@ -1,0 +1,97 @@
+/* font-family: 'Cookie', cursive; */
+@import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
+
+/* font-family: 'Open Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
+
+h1 {
+    font-family: 'Cookie', cursive;
+    font-weight: 100;
+    font-size: 71px;
+    color: #acd0b6;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+ body {
+    background-image: url(/assets/04-BG.png);
+ }
+
+ form {
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+textarea{
+    margin-top: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    border-radius: 5px;
+    max-height: 100px;
+}
+
+ input {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+img {
+    margin: auto;
+    margin-bottom: -80px;
+    display: block;
+    width: 350px;
+}
+
+hr{
+    margin-left: -10px;
+    color: #acd0b6;
+    background-color: #acd0b6;
+    height: 90px;
+    width: 10000em;
+}
+
+button{
+    padding: 10px 25px 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    color: white;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    background-color: #71a397;
+}
+
+button:hover{
+    background-color: #44635c;
+    box-shadow: 0 0 8px #13221e;
+}
+
+@media (max-width: 1920px){
+    .container {
+      margin-top: 105%;
+      width: 1230px;
+    }
+  }
+  
+  @media (max-width: 992px){
+    .container {
+      margin-top: 115px;
+      width: 960px;
+      max-width: 100%;
+    }
+  }
+  
+  .container {
+     position: relative;
+     margin-left: auto;
+     margin-right: auto;
+  }
