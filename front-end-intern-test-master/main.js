@@ -24,7 +24,7 @@
       window.alert('Insira uma mensagem com no mínimo 5 caracteres..')
       preventDefault()
     }else{
-    window.alert(`Recebemos a mensagem: ${messageValue} e estamos profundamente agradecidos. `)
+    window.alert(`Recebemos a mensagem: "${messageValue}" e estamos profundamente agradecidos. `)
       return true
     }
   });
