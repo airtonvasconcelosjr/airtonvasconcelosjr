@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-12 my-4">
+            <form (ngSubmit)="submit()" [formGroup]="forM" #formDir="ngForm">
+                <div class="form">
+                    <label for="nome">Nome</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="nome"
+                            id="nome"
+                            ngModel
+                            [(ngModel)]="nome"
+                            formControlName="nome"
+                            required
+                        />
+                        <div *ngIf="nome.invalid && formDir.submitted" class="validation-error">
+                            <p *ngIf="nome.errors?.['required']">O nome é Obrigatório!</p>
+                        </div>
+                        <label for="email">email</label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            name="email"
+                            id="email"
+                            ngModel
+                            [(ngModel)]="email"
+                            formControlName="email"
+                            required
+                        />
+                        <div *ngIf="email.invalid && formDir.submitted" class="validation-error">
+                            <p *ngIf="email.errors?.['required']">O nome é Obrigatório!</p>
+                        </div>
+                        <label for="telefone">Telefone</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            name="telefone"
+                            id="telefone"
+                            ngModel
+                            [(ngModel)]="telefone"
+                            formControlName="telefone"
+                            required
+                        />
+                        <button (click)="submit()" type="submit" class="pulsar">Enviar</button>
+                </div>
+            </form>
