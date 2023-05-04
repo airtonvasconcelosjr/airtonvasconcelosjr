@@ -1,0 +1,32 @@
+.loja-colchoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .colchao {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+    position: relative;
+    /* border: none; */
+  }
+  
+  .div1 {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    height: 200px;
+    display: none;
+  }
+  
+  .colchao:hover img {
+    display: block;
+    z-index: 1; /* Adicione um z-index maior para a imagem do hover */
+  }
+
+  .colchaofixo {
+    position: relative;
+  }
