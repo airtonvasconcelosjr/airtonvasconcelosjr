@@ -1,32 +1,41 @@
-.loja-colchoes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .colchao {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    margin: 10px;
-    position: relative;
-    /* border: none; */
-  }
-  
-  .div1 {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 200px;
-    height: 200px;
-    display: none;
-  }
-  
-  .colchao:hover img {
-    display: block;
-    z-index: 1; /* Adicione um z-index maior para a imagem do hover */
-  }
+.colchoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: auto;
+  background-color: #fff; /* adicionei um fundo branco para diferenciar do cabeçalho */
+  padding: 20px; /* adicionei um padding para separar do cabeçalho */
+}
 
-  .colchaofixo {
-    position: relative;
-  }
+.lista-colchoes {
+  position: relative;
+  flex-basis: calc(33.33% - 10px);
+  margin: 5px;
+  align-items: center; /* centraliza a imagem e os botões */
+}
+
+.imagem-colchao {
+  width: 100%;
+  max-width: 600px; /* define uma largura máxima para a imagem */
+  height: auto;
+  margin: 5px;
+}
+
+.botoes-descricao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px; /* adiciona um espaço entre a imagem e os botões */
+}
+
+.botoes-descricao button {
+  margin-bottom: 10px;
+  font-size: 14px; /* aumenta o tamanho da fonte */
+  padding: 8px 25px; /* aumenta o espaçamento interno */
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 200;
+}
