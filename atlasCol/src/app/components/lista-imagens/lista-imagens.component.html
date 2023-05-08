@@ -1,44 +1,11 @@
-<section class="container criar-usuarios ff-inter">
-    <header class="header">
-        <div class="loja-colchoes">
-    <div class="colchao" id="colchao1">
-        <img class="colchaofixo" src="../../../assets/imagens/colchao.png">
-        <img class="div1" src="../../../assets/imagens/colchao.png">
+<section class="colchoes">
+    <div class="lista-colchoes" *ngFor="let colchao of colchoes">
+      <img id="imagem-colchao" [src]="colchao.imagem" alt="Colchão {{ colchao.id }}" class="media-object img-responsive img-thumbnail imagem-colchao">
+      <div class="botoes-descricao">
+        <button (click)="toggleDescricao(colchao)">
+            {{ colchao.abrirDescricao ? 'Fechar' : 'Descrição ' + colchao.nome }}
+          </button>
+      </div>
+      <img [hidden]="!colchao.abrirDescricao" [src]="colchao.descricao">
     </div>
-    <div class="colchao" id="colchao2">
-        <!-- <img src="../../../assets/imagens/colchao.png"> -->
-    </div>
-    <div class="colchao" id="colchao3">
-        <!-- <img src="../../../assets/imagens/colchao.png"> -->
-    </div>
-    <div class="colchao" id="colchao4">
-        <!-- <img src="../../../assets/imagens/colchao.png"> -->
-    </div>
-    <div class="colchao" id="colchao5">
-        <!-- <img src="../../../assets/imagens/colchao.png"> -->
-    </div>
-    <div class="colchao" id="colchao6">
-        <!-- <img src="../../../assets/imagens/colchao.png"> -->
-    </div>
-    <div class="colchao" id="colchao7">
-        <!-- <img src="../../../assets/imagens/colchao.png"> -->
-    </div>
-    <div class="colchao" id="colchao8">
-        <!-- <img src="../../../assets/imagens/colchao.png"> -->
-    </div>
-    <div class="colchao" id="colchao9">
-        <!-- <img src="../../../assets/imagens/colchao.png"> -->
-    </div>
-    <div class="colchao" id="colchao10">
-        <!-- <img src="../../../assets/imagens/colchao.png"> -->
-    </div>
-    <div class="colchao" id="colchao10">
-        <!-- <img src="../../../assets/imagens/colchao.png"> -->
-    </div>
-    <div class="colchao" id="colchao10">
-        <!-- <img src="../../../assets/imagens/colchao.png"> -->
-    </div>
-  </div>
-</header>
-</section>
-  
+  </section>
