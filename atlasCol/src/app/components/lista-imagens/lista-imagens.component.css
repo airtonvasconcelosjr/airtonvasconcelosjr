@@ -16,9 +16,13 @@
 
 .imagem-colchao {
   width: 100%;
-  max-width: 600px; /* define uma largura máxima para a imagem */
+  max-width: 875px; /* define uma largura máxima para a imagem */
   height: auto;
   margin: 5px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2z); /* adiciona uma sombra com deslocamento x=2px, y=2px, blur=5px e transparência de 30% */
+  
 }
 
 .botoes-descricao {
@@ -37,7 +41,7 @@
   background-color: black;
   color: white;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: 00;
+  font-weight: 300;
   max-width: 150px;
   max-height: auto;
   cursor: pointer;  
@@ -48,7 +52,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1200px;
   height: auto;
   border: solid 1px black;
   z-index: 1;
@@ -56,24 +59,72 @@
 
 .button-descricao {
   position: fixed;
-  top: 9%;
-  left: 78%;
-  padding: 4px 6px;
+  top: 50%;
+  left: 35%;
   z-index: 2;
+  font-size: 40px;
   border: none;
-  background-color: rgb(186, 185, 185);
+  background-color: none;
+  background: unset !important;
   color: black;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
-  border-radius: 3px;
-  cursor: pointer;
+  opacity: 0.1;
 }
 
 .button-descricao:hover{
-  transform: scale(1.2);
+  transform: scale(1.1) translateY(-20px);
 }
 
 .botoes-descricao:hover{
   transform: scale(1.1);
+}
+
+.title{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  position: relative;
+  left: 40%;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 35px; /* exemplo de uso da unidade 'em' */
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  
+}
+
+
+@media (min-width: 576px) {
+  .imagem-descricao {
+      width: 120%;
+  }
+}
+@media (min-width: 768px) {
+  .imagem-descricao {
+      width: 120%;
+  }
+}
+@media (min-width: 992px) {
+  .imagem-descricao {
+      width: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  .imagem-descricao {
+      width: 80%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .imagem-descricao {
+      width: 60%;
+  }
 }
 
