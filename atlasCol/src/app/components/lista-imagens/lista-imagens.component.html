@@ -7,5 +7,15 @@
           </button>
       </div>
       <img [hidden]="!colchao.abrirDescricao" [src]="colchao.descricao" class="imagem-descricao">
+      <button [hidden]="!colchao.abrirDescricao" class="button-descricao" (click)="toggleDescricao(colchao)"> {{ colchao.abrirDescricao ? 'X' : 'Descrição ' }}</button>
     </div>
   </section>
+
+  <script>
+   document.getElementById('corpo').addEventListener('click', function() {
+  var imagensDescricao = document.querySelectorAll('.imagem-descricao');
+  imagensDescricao.forEach(function(imagemDescricao) {
+    imagemDescricao.style.display = 'none';
+  });
+});
+  </script>
