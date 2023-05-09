@@ -1,21 +1,26 @@
-<section class="colchoes">
+<button class="title" (click)="mostrarKing = !mostrarKing; mostrarSetaParaBaixo = !mostrarSetaParaBaixo">
+  King Koil 
+  <i class="fa mt-1" [ngClass]="{'fa-angle-down': mostrarSetaParaBaixo, 'fa-angle-up': !mostrarSetaParaBaixo}"></i>
+</button>
+<button class="title" (click)="mostrarMercosul = !mostrarMercosul; mostrarSetaParaBaixoMercosul = !mostrarSetaParaBaixoMercosul">
+  Mercosul 
+  <i class="fa mt-1" [ngClass]="{'fa-angle-down': mostrarSetaParaBaixoMercosul, 'fa-angle-up': !mostrarSetaParaBaixoMercosul}"></i>
+</button>
+
+<div *ngIf="( mostrarMercosul || mostrarKing )">
+  <section class="colchoes">
     <div class="lista-colchoes" *ngFor="let colchao of colchoes">
-      <img id="imagem-colchao" [src]="colchao.imagem" alt="Colchão {{ colchao.id }}" class="media-object img-responsive img-thumbnail imagem-colchao">
-      <div class="botoes-descricao">
-        <button (click)="toggleDescricao(colchao)">
+      <ng-container *ngIf="((mostrarKing === true && colchao.fabril === 'King Koil') || (mostrarMercosul === true && colchao.fabril === 'Mercosul'))">
+        <img id="imagem-colchao" [src]="colchao.imagem" alt="Colchão {{ colchao.id }}" class="media-object img-responsive img-thumbnail imagem-colchao">
+        <div class="botoes-descricao">
+          <button (click)="toggleDescricao(colchao)">
             {{ colchao.abrirDescricao ? 'Fechar' : 'Descrição ' + colchao.nome }}
           </button>
-      </div>
-      <img [hidden]="!colchao.abrirDescricao" [src]="colchao.descricao" class="imagem-descricao">
-      <button [hidden]="!colchao.abrirDescricao" class="button-descricao" (click)="toggleDescricao(colchao)"> {{ colchao.abrirDescricao ? 'X' : 'Descrição ' }}</button>
+        </div>
+        <img [hidden]="!colchao.abrirDescricao" [src]="colchao.descricao" class="imagem-descricao"  (click)="toggleDescricao(colchao)">
+        <button [hidden]="!colchao.abrirDescricao" class="button-descricao" (click)="toggleDescricao(colchao)"> {{ colchao.abrirDescricao ? 'Clique na imagem para fechar' : 'Descrição ' }}</button>
+      </ng-container>
     </div>
   </section>
+</div>
 
-  <script>
-   document.getElementById('corpo').addEventListener('click', function() {
-  var imagensDescricao = document.querySelectorAll('.imagem-descricao');
-  imagensDescricao.forEach(function(imagemDescricao) {
-    imagemDescricao.style.display = 'none';
-  });
-});
-  </script>
