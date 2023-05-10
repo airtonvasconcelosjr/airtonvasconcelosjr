@@ -22,7 +22,7 @@
   aspect-ratio: 3/2;
   object-fit: contain;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2z); /* adiciona uma sombra com deslocamento x=2px, y=2px, blur=5px e transparência de 30% */
-  
+  margin-top: 10px;
 }
 
 .botoes-descricao {
@@ -81,15 +81,11 @@
 }
 
 .title{
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+  left: 30%;
   font-size: 25px;
   position: relative;
-  left: 40%;
   cursor: pointer;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px 5px 15px 5px;
   padding: 10px 35px; /* exemplo de uso da unidade 'em' */
   border-radius: 10px;
   border: none;
