@@ -3,7 +3,6 @@
   justify-content: center;
   flex-wrap: wrap;
   min-height: auto;
-  background-color: #fff; /* adicionei um fundo branco para diferenciar do cabeçalho */
   padding: 20px; /* adicionei um padding para separar do cabeçalho */
 }
 
