@@ -1,16 +1,26 @@
-<button class="title" (click)="mostrarKing = !mostrarKing; mostrarSetaParaBaixo = !mostrarSetaParaBaixo">
-  King Koil 
+<button class="title" (click)="toggleMostrar('king')">
+  King Koil
   <i class="fa mt-1" [ngClass]="{'fa-angle-down': mostrarSetaParaBaixo, 'fa-angle-up': !mostrarSetaParaBaixo}"></i>
 </button>
-<button class="title" (click)="mostrarMercosul = !mostrarMercosul; mostrarSetaParaBaixoMercosul = !mostrarSetaParaBaixoMercosul">
-  Mercosul 
+<button class="title" (click)="toggleMostrar('mercosul')">
+  Mercosul
   <i class="fa mt-1" [ngClass]="{'fa-angle-down': mostrarSetaParaBaixoMercosul, 'fa-angle-up': !mostrarSetaParaBaixoMercosul}"></i>
 </button>
+<button class="title" (click)="toggleMostrar('restonic')">
+  Restonic
+  <i class="fa mt-1" [ngClass]="{'fa-angle-down': mostrarSetaParaBaixoRestonic, 'fa-angle-up': !mostrarSetaParaBaixoRestonic}"></i>
+</button>
+<button class="title" (click)="toggleMostrar('ecoflex')">
+  Ecoflex
+  <i class="fa mt-1" [ngClass]="{'fa-angle-down': mostrarSetaParaBaixoEcoflex, 'fa-angle-up': !mostrarSetaParaBaixoEcoflex}"></i>
+</button>
 
-<div *ngIf="( mostrarMercosul || mostrarKing )">
+
+
+<div *ngIf="( mostrarKing )">
   <section class="colchoes">
-    <div class="lista-colchoes" *ngFor="let colchao of colchoes">
-      <ng-container *ngIf="((mostrarKing === true && colchao.fabril === 'King Koil') || (mostrarMercosul === true && colchao.fabril === 'Mercosul'))">
+    <div class="lista-colchoes" *ngFor="let colchao of king">
+      <ng-container *ngIf="((mostrarKing === true && colchao.fabril === 'King Koil'))">
         <img id="imagem-colchao" [src]="colchao.imagem" alt="Colchão {{ colchao.id }}" class="media-object img-responsive img-thumbnail imagem-colchao">
         <div class="botoes-descricao">
           <button (click)="toggleDescricao(colchao)">
@@ -23,4 +33,22 @@
     </div>
   </section>
 </div>
+
+<div *ngIf="( mostrarMercosul )">
+  <section class="colchoes">
+    <div class="lista-colchoes" *ngFor="let colchao of mercosul">
+      <ng-container *ngIf="((mostrarMercosul === true && colchao.fabril === 'Mercosul'))">
+        <img id="imagem-colchao" [src]="colchao.imagem" alt="Colchão {{ colchao.id }}" class="media-object img-responsive img-thumbnail imagem-colchao">
+        <div class="botoes-descricao">
+          <button (click)="toggleDescricao(colchao)">
+            {{ colchao.abrirDescricao ? 'Fechar' : 'Descrição ' + colchao.nome }}
+          </button>
+        </div>
+        <img [hidden]="!colchao.abrirDescricao" [src]="colchao.descricao" class="imagem-descricao"  (click)="toggleDescricao(colchao)">
+        <button [hidden]="!colchao.abrirDescricao" class="button-descricao" (click)="toggleDescricao(colchao)"> {{ colchao.abrirDescricao ? 'Clique na imagem para fechar' : 'Descrição ' }}</button>
+      </ng-container>
+    </div>
+  </section>
+</div>
+
 
