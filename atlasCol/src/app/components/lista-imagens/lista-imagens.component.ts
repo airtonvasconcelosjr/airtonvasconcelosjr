@@ -31,6 +31,16 @@ export class ListaImagensComponent {
     { id: 13, nome: '562', fabril:'Mercosul', imagem: 'assets/imagens/562.png', descricao: 'assets/imagens/562_desc.png', abrirDescricao: false },
     { id: 14, nome: '672', fabril:'Mercosul', imagem: 'assets/imagens/672.png', descricao: 'assets/imagens/672_desc.png', abrirDescricao: false },
   ];
+  restonic = [
+  { id: 15, nome: '467', fabril:'Restonic', imagem: 'assets/imagens/467.png', descricao: 'assets/imagens/467_desc.png', abrirDescricao: false },
+  ];
+
+  mostrarOpcoes = {
+    king: { ativo: false, setaParaBaixo: true },
+    mercosul: { ativo: false, setaParaBaixo: true },
+    restonic: { ativo: false, setaParaBaixo: true },
+    ecoflex: { ativo: false, setaParaBaixo: true }
+  };
 
   mostrarKing = false;
   mostrarSetaParaBaixo = true;
@@ -44,27 +54,52 @@ export class ListaImagensComponent {
 
   colchaoAberto: number | null = null;
 
-toggleMostrar(opcao: string) {
-  if (opcao === 'king') {
-    this.mostrarKing = !this.mostrarKing;
-    this.mostrarSetaParaBaixo = !this.mostrarSetaParaBaixo;
-
-    // Fechar a opção Mercosul, se estiver aberta
-    if (this.mostrarMercosul) {
-      this.mostrarMercosul = false;
-      this.mostrarSetaParaBaixoMercosul = true;
-    }
-  } else if (opcao === 'mercosul') {
-    this.mostrarMercosul = !this.mostrarMercosul;
-    this.mostrarSetaParaBaixoMercosul = !this.mostrarSetaParaBaixoMercosul;
-
-    // Fechar a opção King Koil, se estiver aberta
-    if (this.mostrarKing) {
-      this.mostrarKing = false;
-      this.mostrarSetaParaBaixo = true;
+  toggleMostrar(opcao: string) {
+    if (opcao === 'king') {
+      this.mostrarOpcoes.king.ativo = !this.mostrarOpcoes.king.ativo;
+      this.mostrarOpcoes.king.setaParaBaixo = !this.mostrarOpcoes.king.setaParaBaixo;
+  
+      // Fechar a opção Mercosul, se estiver aberta
+      if (this.mostrarOpcoes.mercosul.ativo) {
+        this.mostrarOpcoes.mercosul.ativo = false;
+        this.mostrarOpcoes.mercosul.setaParaBaixo = true;
+      }
+      // Fechar a opção Restonic, se estiver aberta
+      if (this.mostrarOpcoes.restonic.ativo) {
+        this.mostrarOpcoes.restonic.ativo = false;
+        this.mostrarOpcoes.restonic.setaParaBaixo = true;
+      }
+    } else if (opcao === 'mercosul') {
+      this.mostrarOpcoes.mercosul.ativo = !this.mostrarOpcoes.mercosul.ativo;
+      this.mostrarOpcoes.mercosul.setaParaBaixo = !this.mostrarOpcoes.mercosul.setaParaBaixo;
+  
+      // Fechar a opção King Koil, se estiver aberta
+      if (this.mostrarOpcoes.king.ativo) {
+        this.mostrarOpcoes.king.ativo = false;
+        this.mostrarOpcoes.king.setaParaBaixo = true;
+      }
+      // Fechar a opção Restonic, se estiver aberta
+      if (this.mostrarOpcoes.restonic.ativo) {
+        this.mostrarOpcoes.restonic.ativo = false;
+        this.mostrarOpcoes.restonic.setaParaBaixo = true;
+      }
+    } else if (opcao === 'restonic') {
+      this.mostrarOpcoes.restonic.ativo = !this.mostrarOpcoes.restonic.ativo;
+      this.mostrarOpcoes.restonic.setaParaBaixo = !this.mostrarOpcoes.restonic.setaParaBaixo;
+  
+      // Fechar a opção King Koil, se estiver aberta
+      if (this.mostrarOpcoes.king.ativo) {
+        this.mostrarOpcoes.king.ativo = false;
+        this.mostrarOpcoes.king.setaParaBaixo = true;
+      }
+      // Fechar a opção Mercosul, se estiver aberta
+      if (this.mostrarOpcoes.mercosul.ativo) {
+        this.mostrarOpcoes.mercosul.ativo = false;
+        this.mostrarOpcoes.mercosul.setaParaBaixo = true;
+      }
     }
   }
-}
+  
 
   
   toggleDescricao(colchao: any) {
