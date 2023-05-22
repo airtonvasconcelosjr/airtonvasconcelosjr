@@ -1,7 +1,7 @@
 Hi there, i'm Airton Jr!
 
--  I’m currently working on PHP, JavaScript, ReactJS, HTML and CSS;
--  I’m currently learning JavaScript;
+-  I’m currently working on Angular, PHP, JavaScript, ReactJS, ReactNative, HTML and CSS;
+-  I’m currently learning Angular;
 -  Pronouns: He/his
 
 ##
