@@ -1,8 +1,7 @@
 Hi there, i'm Airton Jr!
 
--  I’m currently working on Angular, PHP, JavaScript, ReactJS, ReactNative, HTML and CSS;
--  I’m currently learning Angular;
--  Pronouns: He/his
+-  I’m currently working on AngularJs, Ruby, Vue;
+-  I’m currently learning Java;
 
 ##
 
