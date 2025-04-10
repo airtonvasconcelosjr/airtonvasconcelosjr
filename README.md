@@ -6,7 +6,7 @@ Hi there, i'm Airton Jr!
 
 <div>
 // If this code works, it was written by me.<br>
- If not, I don't know who wrote it...
+// If not, I don't know who wrote it...
 </div>
 
 ##
