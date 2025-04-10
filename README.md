@@ -1,7 +1,6 @@
 Hi there, i'm Airton Jr!
 
--  I’m currently working on AngularJs, Ruby, Vue;
--  I’m currently learning Java;
+-  I’m currently working on AngularJs, Java;
 
 ##
 
