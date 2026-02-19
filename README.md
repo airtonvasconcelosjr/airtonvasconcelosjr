@@ -1,6 +1,6 @@
 Hi there, i'm Airton Jr!
 
--  I’m currently working on AngularJs, Java;
+-  I’m currently working on Angular e Java;
 
 ##
 
